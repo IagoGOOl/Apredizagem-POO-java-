@@ -1,6 +1,6 @@
 package Conta;
 public class ContaCorrente extends Conta{
-    private Double LimiterConta;
+    private Double LimiterConta = 200.0;
    
     public ContaCorrente(String cpf, Integer numeroConta, String nome, Double saldo, Double limiterConta) {
         super(cpf, numeroConta, nome, saldo);
@@ -31,17 +31,17 @@ public class ContaCorrente extends Conta{
 
     @Override
     public void sacar(double quantia){
-        double valor = quantia + 2.0;
-        this.saldo -=  valor;
+        super.sacar(quantia);
+        saldo -= 2.0;
     }
 
 
     @Override
     public String toString() {
-        return "ContaCorrente [ nome " + getNome()
-        + "Numero conta" + getNumeroConta()
-        + "Saldo "  + getSaldo() +
-        "LimiterConta=" + LimiterConta + "]";
+        return "ContaCorrente [ nome = " + getNome()
+        + ", Numero conta = " + getNumeroConta()
+        + ", Saldo = "  + getSaldo() +
+        ", LimiterConta = " + LimiterConta + " ]";
     }
     
 }

@@ -52,6 +52,14 @@ public  abstract class Cartao {
         this.bandeira = tipoCartao;
     }
 
+    public void TipoCartao(String tipoString){
+        if (bandeira != "ouro" ){
+             this.taxa = 4.00;
+        }else{
+            this.taxa = 0.0;
+        }
+    }
+
     public double getTaxa() {
         return taxa;
     }
@@ -82,14 +90,6 @@ public  abstract class Cartao {
 
     public void setConta(Conta conta) {
         this.conta = conta;
-    }
-
-    public void TipoCartao(String tipoString){
-        if (bandeira != "visa" ){
-             this.taxa = 4.00;
-        }else{
-            this.taxa = 0.0;
-        }
     }
 
     

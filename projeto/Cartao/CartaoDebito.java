@@ -13,7 +13,7 @@ public class CartaoDebito extends Cartao{
     }
 
     public void debitar (double valor){
-        this.conta.sacar(valor);
+        conta.sacar(valor);
     }
  
     

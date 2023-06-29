@@ -1,6 +1,6 @@
 package Conta;
 public class ContaPoupaca extends Conta {
-    private Double valorDojuros;
+    private Double valorDojuros = 13.5;
 
     public ContaPoupaca(String cpf, Integer numeroConta, String nome, Double saldo ) {
         super(cpf, numeroConta, nome, saldo);
@@ -26,12 +26,12 @@ public class ContaPoupaca extends Conta {
 
 
     public double juros(){
-        return this.saldo = this.saldo * valorDojuros;
+        return saldo * valorDojuros;
     }
 
 
     public void juroSaldo(){
-        this.saldo +=  valorDojuros;
+        saldo += saldo * valorDojuros;
     }
 
 
@@ -43,10 +43,10 @@ public class ContaPoupaca extends Conta {
     
     @Override
     public String toString() {
-        return "ContaPoupaca [nome " + getNome()
-        + "Numero conta" + getNumeroConta()
-        + "Saldo " + getSaldo()
-        +  "valorDojuros=" + valorDojuros + "]";
+        return "ContaPoupaca [ nome = " + getNome()
+        + " , Numero conta = " + getNumeroConta()
+        + ", Saldo = " + getSaldo()
+        +  " valor Do juros = " + getValorDojuros() + " ]";
     }
     
 

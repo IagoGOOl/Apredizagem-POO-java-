@@ -31,8 +31,9 @@ public class GerenciamentoCartao {
 
     public void compra(int numeroCartao, String loja, double valor){
         CartaoCredito cartaoCredito = buscarCartaoCredito(numeroCartao);
-        cartaoCredito.compra(valor, loja);
-
+        if (cartaoCredito != null) {
+            cartaoCredito.compra(valor, loja);
+        }
     }
 
    

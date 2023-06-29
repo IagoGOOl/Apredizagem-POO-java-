@@ -30,11 +30,16 @@ public class GerenciementoConta {
     }
 
     public Conta buscarConta(int numConta){
+    
         Conta contaEncontrada = conta.stream()
          .filter(contaatual -> numConta == contaatual.getNumeroConta())
          .findFirst()
          .orElse(null);
+         if (contaEncontrada == null){
+            return buscarContaPop(numConta);
+         }
         return contaEncontrada;
+
     }
 
     public ContaPoupaca buscarContaPop(int numConta){
@@ -47,36 +52,14 @@ public class GerenciementoConta {
 
     public void depositar(double valor, int numeroConta){
         Conta contaEncontrada = this.buscarConta(numeroConta);
-       
+        if (contaEncontrada != null){
         contaEncontrada.deposito(valor);
     }
-
-    public void depositarPop(double valor, int numeroConta){
-        Conta contaEncontrada = this.buscarContaPop(numeroConta);
-        contaEncontrada.deposito(valor);
     }
 
     public void sacar(double valor, int numeroConta){
         Conta contaEncontrada = this.buscarConta(numeroConta);
         contaEncontrada.sacar(valor);
-    }
-
-    public void sacarPop(double valor, int numeroConta){
-        Conta contaEncontrada = this.buscarContaPop(numeroConta);
-        contaEncontrada.sacar(valor);
-    }
-
-
-    public Conta printConta(int tipo, int numeroConta){
-        if ( tipo == 1){
-           ContaPoupaca acc = contaPop.stream().filter(x -> x.getNumeroConta() == numeroConta ).findFirst().orElse(null);
-            return acc;
-        }else if(tipo == 2){
-            ContaCorrente acc = conta.stream().filter(x -> x.getNumeroConta() == numeroConta ).findFirst().orElse(null);
-            return acc;
-        }else{
-            return null;
-        }
     }
 
 

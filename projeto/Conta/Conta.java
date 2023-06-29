@@ -1,5 +1,5 @@
 package Conta;
-public  abstract class Conta {
+public  class Conta {
     private String cpf;
     private Integer numeroConta;
     private String nome;
@@ -65,7 +65,9 @@ public  abstract class Conta {
    }
    
    
-   public abstract void sacar (double quantia);
+   public void sacar (double quantia){
+    this.saldo -=  quantia - 5.0;
+   }
     
     
 }

@@ -1,10 +1,8 @@
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
-import Cartao.Cartao;
-import Gerenciadores.GerenciamentoCartao;
-import Gerenciadores.GerenciementoConta;
+
+
 
 public class SistemaBanco{
     /* Scanner sc = new Scanner(System.in);
@@ -14,54 +12,53 @@ public class SistemaBanco{
         Menu menu = new Menu();
         int opcao = 0;
 
-        manu.criaCartaoCredito()
 
-        // while(opcao !=7){
-        //     System.out.println(".....................................................................");
-        //     System.out.println("....................Sistema Bancario.................................");
-        //     System.out.println(".....................................................................");
-        //     System.out.println("... 1 Cadastra Conta....................................................");
-        //     System.out.println("... 2 Depositar Conta....................................................");
-        //     System.out.println("... 3 sacar Conta.......................................................");
-        //     System.out.println("... 4 Cria Cartao.......................................................");
-        //     System.out.println("... 5 Compra............................................................");
-        //     System.out.println("... 6 Fatura........ ....................................................");
-        //     System.out.println("...7 extrato da Conta...................................................");
-        //     System.out.println("... 8 sair........ ....................................................");
+        while(opcao != 8){
+            System.out.println(".....................................................................");
+            System.out.println("....................Sistema Bancario.................................");
+            System.out.println(".....................................................................");
+            System.out.println("... 1 Cadastra Conta....................................................");
+            System.out.println("... 2 Depositar Conta....................................................");
+            System.out.println("... 3 sacar Conta.......................................................");
+            System.out.println("... 4 Cria Cartao.......................................................");
+            System.out.println("... 5 Compra............................................................");
+            System.out.println("... 6 Fatura........ ....................................................");
+            System.out.println("... 7 extrato......... ....................................................");
+            System.out.println("... 8 Sair......... ....................................................");
 
-        //     System.out.println("digite um dos valores");
-        //     opcao = sc.nextInt();
-        //     switch(opcao){
-        //         case 1: //cadastra
-        //         menu.cadastraConta();
-        //         break;
-        //         case 2: // Depositar
-        //         menu.daposito();
-        //         break;
-        //         case 3:// Sacar
-        //         menu.sacar();
-        //         break;
-        //         case 4:// Criar Cartao
-        //         menu.criarCartao();
-        //         break;
-        //         case 5:
-        //         menu.compra();
-        //         break;
-        //         case 6:
-        //         menu.fatura();
-        //         break;
-        //         case 7:
-        //         menu.extrato();
-        //         break;
-        //         case 8:
-        //         System.out.println("obrigado!!!");
-        //         break;
-        //         default:
-        //         System.out.println("numero invalido");
-        //     }
-        //}
-        //sc.close();
-       }
+            System.out.print("digite um dos valores: ");
+            opcao = sc.nextInt();
+            switch(opcao){
+                case 1: //cadastra
+                menu.cadastraConta();
+                break;
+                case 2: // Depositar
+                menu.deposito();
+                break;
+                case 3:// Sacar
+                menu.sacar();
+                break;
+                case 4:// Criar Cartao
+                menu.criarCartao();
+                break;
+                case 5:
+                menu.compra();
+                break;
+                case 6:
+                menu.fatura();
+                break;
+                case 7:
+                menu.extrato();
+                break;
+                case 8:
+                System.out.println("Obrigado!!!");
+                break;
+                default:
+                System.out.println("numero invalido");
+            }
+        }
+        sc.close();
+        }
 
 
         

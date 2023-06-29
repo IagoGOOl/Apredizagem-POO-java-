@@ -11,7 +11,6 @@ public class Lancamento {
         this.valor = valor;
         this.loja = loja;
     }
-    public Lancamento(){}
 
     public double getValor() {
         return valor;
@@ -31,7 +30,7 @@ public class Lancamento {
 
     @Override
     public String toString() {
-        return "Lancamento [loja= " + loja + ", valor= " + valor + "]";
+        return "Lancamento [ loja= " + loja + ", valor= " + valor + " ]";
     }
 
     
